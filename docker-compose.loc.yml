@@ -12,6 +12,17 @@ services:
             - './apps/backend:/apps/backend/'
         networks:
             - internal
+    node-backend:
+        build:
+            context: .
+            dockerfile: docker/node-backend/Dockerfile
+        container_name: node-backend
+        restart: on-failure
+        volumes:
+            - './apps/backend:/apps/backend/'
+        tty: true
+        networks:
+            - internal
     nginx:
         image: nginx:stable
         container_name: nginx
