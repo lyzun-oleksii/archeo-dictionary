@@ -14,3 +14,8 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::namespace('Admin')->group(function () {
+    Route::get('/admin/concepts', 'ConceptController@index');
+    Route::post('/admin/concept/store', 'ConceptController@store');
+});
