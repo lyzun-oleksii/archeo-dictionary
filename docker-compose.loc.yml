@@ -4,6 +4,9 @@ services:
         build:
             context: .
             dockerfile: docker/php/Dockerfile
+            args:
+                - USER_ID
+                - GROUP_ID
         container_name: php
         restart: on-failure
         links:

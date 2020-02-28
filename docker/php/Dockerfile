@@ -1,8 +1,7 @@
 FROM php:7.4.3-fpm
 
-ENV USER=docker
-ENV UID=1001
-ENV GID=1001
+ARG USER_ID
+ARG GROUP_ID
 
 RUN apt-get update && apt-get install -y \
         git \
@@ -24,3 +23,19 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 WORKDIR /apps/backend/
 
 COPY /apps/backend/ /apps/backend/
+
+RUN if getent passwd www-data; then \
+    userdel -f www-data &&\
+    if getent group www-data ; then groupdel www-data; fi &&\
+    groupadd -g ${GROUP_ID} www-data &&\
+    useradd -l -u ${USER_ID} -g www-data www-data &&\
+    install -d -m 0755 -o www-data -g www-data /home/www-data &&\
+    chown --recursive \
+          --from=33:33 ${USER_ID}:${GROUP_ID} \
+        /home/www-data \
+        /apps/backend/ \
+;fi
+
+RUN chown ${USER_ID}:${GROUP_ID} storage/logs -R && chmod g+s storage/logs/ -R
+
+USER www-data
