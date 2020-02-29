@@ -3,3 +3,19 @@
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+// Components
+@import 'components/sidebar';
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+
+    .sidebar {
+        width: 30%;
+    }
+
+    .main {
+        width: 70%;
+    }
+}

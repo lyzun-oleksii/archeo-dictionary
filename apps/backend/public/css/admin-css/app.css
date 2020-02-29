@@ -10884,3 +10884,16 @@ a.text-dark:focus {
   }
 }
 
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.wrapper .sidebar {
+  width: 30%;
+}
+
+.wrapper .main {
+  width: 70%;
+}
+
