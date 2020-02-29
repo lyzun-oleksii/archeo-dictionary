@@ -16,6 +16,7 @@ Route::get('/', function () {
 });
 
 Route::namespace('Admin')->group(function () {
+    Route::get('/admin', 'IndexController@index');
     Route::get('/admin/concepts', 'ConceptController@index');
     Route::post('/admin/concept/store', 'ConceptController@store');
 });
