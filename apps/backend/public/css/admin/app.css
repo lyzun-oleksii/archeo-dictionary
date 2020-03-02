@@ -16821,16 +16821,148 @@ readers do not read off random characters that represent icons */
   font-weight: 400;
 }
 
+li {
+  list-style-type: none;
+  padding: 10px 0;
+}
+
+li:hover {
+  cursor: pointer;
+}
+
+.caption {
+  font-family: "Lobster", sans-serif;
+}
+
+.caption h1 {
+  text-align: center;
+  font-size: 28px;
+  padding: 15px 0;
+}
+
+@media screen and (max-width: 1000px) {
+  .caption {
+    display: none;
+  }
+}
+
+.profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 1000px) {
+  .profile {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+}
+
+.profile .avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+@media screen and (max-width: 1000px) {
+  .profile .avatar {
+    display: none;
+  }
+}
+
+.profile .navigation-toggle {
+  display: none;
+}
+
+.profile .navigation-toggle button {
+  width: 40px;
+  height: 40px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+}
+
+.profile .navigation-toggle i {
+  margin: 0;
+}
+
+@media screen and (max-width: 1000px) {
+  .profile .navigation-toggle {
+    display: block;
+    margin: 0 25px;
+  }
+}
+
+.profile .name {
+  font-weight: bold;
+}
+
+@media screen and (max-width: 1000px) {
+  .profile .name {
+    margin: 0;
+  }
+}
+
 .wrapper {
   display: flex;
   justify-content: space-between;
+  font-family: "Roboto Mono", "serif";
+}
+
+@media screen and (max-width: 1000px) {
+  .wrapper {
+    flex-direction: column;
+  }
 }
 
 .wrapper .sidebar {
   width: 30%;
+  background-color: #F0F1F4;
+}
+
+@media screen and (max-width: 1000px) {
+  .wrapper .sidebar {
+    min-width: 100%;
+    padding: 10px 0;
+  }
 }
 
 .wrapper .main {
   width: 70%;
+  padding: 20px;
+}
+
+.wrapper .main .page-header {
+  background-color: #F0F1F4;
+  font-family: inherit;
+  font-weight: bolder;
+  padding: 25px;
+}
+
+.wrapper .main .page-header h2 {
+  font-size: 24px;
+  line-height: 0;
+  margin: 0;
+}
+
+@media screen and (max-width: 1000px) {
+  .wrapper .main {
+    min-width: 100%;
+  }
+}
+
+.mr-right-10 {
+  margin-right: 10px;
+}
+
+.mr-top-10 {
+  margin-top: 10px;
+}
+
+.mr-bottom-20 {
+  margin-bottom: 20px;
 }
 

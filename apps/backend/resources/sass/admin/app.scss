@@ -10,15 +10,59 @@
 @import '~@fortawesome/fontawesome-free/scss/solid';
 @import '~@fortawesome/fontawesome-free/scss/brands';
 
+// Components
+@import "components/sidebar";
+
 .wrapper {
     display: flex;
     justify-content: space-between;
+    font-family: 'Roboto Mono', 'serif';
+
+    @media screen and (max-width: 1000px) {
+        flex-direction: column;
+    }
 
     .sidebar {
         width: 30%;
+        background-color: #F0F1F4;
+
+        @media screen and (max-width: 1000px) {
+            min-width: 100%;
+            padding: 10px 0;
+        }
     }
 
     .main {
         width: 70%;
+        padding: 20px;
+
+        .page-header {
+            background-color: #F0F1F4;
+            font-family: inherit;
+            font-weight: bolder;
+            padding: 25px;
+
+            h2 {
+                font-size: 24px;
+                line-height: 0;
+                margin: 0;
+            }
+        }
+
+        @media screen and (max-width: 1000px) {
+            min-width: 100%;
+        }
     }
+}
+
+.mr-right-10 {
+    margin-right: 10px;
+}
+
+.mr-top-10 {
+    margin-top: 10px;
+}
+
+.mr-bottom-20 {
+    margin-bottom: 20px;
 }
