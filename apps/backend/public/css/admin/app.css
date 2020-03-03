@@ -16906,6 +16906,14 @@ li:hover {
   }
 }
 
+.container-fluid,
+.container-sm,
+.container-md,
+.container-lg,
+.container-xl {
+  max-width: 1900px;
+}
+
 .wrapper {
   display: flex;
   justify-content: space-between;
@@ -16919,7 +16927,7 @@ li:hover {
 }
 
 .wrapper .sidebar {
-  width: 30%;
+  width: 25%;
   background-color: #F0F1F4;
 }
 
@@ -16931,7 +16939,7 @@ li:hover {
 }
 
 .wrapper .main {
-  width: 70%;
+  width: 75%;
   padding: 20px;
 }
 
@@ -16951,6 +16959,7 @@ li:hover {
 @media screen and (max-width: 1000px) {
   .wrapper .main {
     min-width: 100%;
+    padding: 20px 0;
   }
 }
 

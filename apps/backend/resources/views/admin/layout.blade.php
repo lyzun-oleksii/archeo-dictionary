@@ -17,7 +17,7 @@
     <script src="{{ asset('js/admin/app.js') }}"></script>
 </head>
 <body>
-<div class="container">
+<div class="container-fluid">
     <div class="wrapper">
         @section('sidebar')
         <div class="sidebar">
@@ -39,7 +39,7 @@
                 </div>
             </div>
             <nav class="main-navigation collapse show" id="main_navigation">
-                <ul class="main">
+                <ul>
                     <li>
                         <i class="fas fa2x fa-bars mr-right-10"></i>
                         Dashboard
