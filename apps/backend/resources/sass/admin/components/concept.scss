@@ -1,0 +1,11 @@
+.concepts {
+    .concept {
+        border-top: 1px solid #F0F1F4;
+        padding: 10px 0;
+    }
+
+    .concept:first-of-type {
+        border: none;
+        padding-top: 0;
+    }
+}

@@ -42,7 +42,7 @@
                 <ul>
                     <li>
                         <i class="fas fa2x fa-bars mr-right-10"></i>
-                        Dashboard
+                        <a class="clean-link" href="{{ route('admin.index') }}">Dashboard</a>
                     </li>
                     <li
                         data-toggle="collapse"
@@ -51,7 +51,9 @@
                         <i class="fas fa2x fa-book mr-right-10"></i>
                         Dictionary
                         <ul class="dictionary collapse" id="nav_dictionary">
-                            <li>Concepts</li>
+                            <li>
+                                <a class="clean-link" href="{{ route('admin.concept.index') }}">Concepts</a>
+                            </li>
                             <li>Categories</li>
                             <li>Words</li>
                         </ul>

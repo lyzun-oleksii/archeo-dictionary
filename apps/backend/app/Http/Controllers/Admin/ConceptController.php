@@ -10,8 +10,10 @@ class ConceptController extends Controller
 {
     public function index(Request $request, DictionaryConcept $concept)
     {
-        $concepts = $concept::paginate(20);
-        return view('welcome', ['concepts' => $concepts]);
+        $concepts = $concept::paginate(2);
+        return view('admin.concept', [
+            'concepts' => $concepts, 'page' => 'Concepts'
+        ]);
     }
 
     public function store(Request $request, DictionaryConcept $concept)

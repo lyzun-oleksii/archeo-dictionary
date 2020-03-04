@@ -11,7 +11,8 @@
 @import '~@fortawesome/fontawesome-free/scss/brands';
 
 // Components
-@import "components/sidebar";
+@import 'components/sidebar';
+@import 'components/concept';
 
 .container-fluid{
     max-width: 1900px;
@@ -60,6 +61,10 @@
     }
 }
 
+.mr-right-5 {
+    margin-right: 5px;
+}
+
 .mr-right-10 {
     margin-right: 10px;
 }
@@ -70,4 +75,9 @@
 
 .mr-bottom-20 {
     margin-bottom: 20px;
+}
+
+.clean-link {
+    text-decoration: none!important;
+    color: #000!important;
 }
